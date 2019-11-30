@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://panoramas/panoram_3.png" type="Texture" id=1]
+[ext_resource path="res://tracks/road_6.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tracks/road_6_path.tscn" type="PackedScene" id=3]
+[ext_resource path="res://stage_select_environment.tres" type="Environment" id=4]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_energy = 1.33
+
+[node name="Track" type="Spatial"]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.924075, 0.382212, 0, -0.382212, 0.924075, 0, 5.29167, 0 )
+light_color = Color( 0.788235, 0.705882, 0.705882, 1 )
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+
+[node name="RoadPath" parent="." instance=ExtResource( 3 )]
+
+[node name="PreviewCamera" type="Camera" parent="."]
+transform = Transform( -0.0118084, 0.986832, -0.161316, 0.0720435, 0.161748, 0.984199, 0.997332, 0, -0.0730049, -139.493, 902.31, 176.719 )
+environment = ExtResource( 4 )
+far = 5000.0
