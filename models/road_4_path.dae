@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+	<contributor>
+		<author>Anonymous</author>
+		<authoring_tool>Collada Exporter for Blender 2.6+, by Juan Linietsky (juan@codenix.com)</authoring_tool>
+	</contributor>
+	<created>2019-11-16T01:30:35Z</created>
+	<modified>2019-11-16T01:30:35Z</modified>
+	<unit meter="1.0" name="meter"/>
+	<up_axis>Z_UP</up_axis>
+</asset>
+<library_geometries>
+	<geometry id="id-spline-2" name="NurbsPath.021">
+		<spline closed="0">
+			<source id="id-spline-2-positions">
+				<float_array id="id-spline-2-positions-array" count="51"> -41.34640121459961 2.998317995661637e-06 -4.417840480804443 -14.520708084106445 2.1815122863699798e-07 -5.021919250488281 96.4212875366211 2.5002962047437904e-06 29.76729965209961 90.48555755615234 -34.246978759765625 71.04902648925781 106.91511535644531 -97.16571807861328 14.655769348144531 180.09898376464844 -134.94113159179688 -37.24748992919922 224.1011962890625 11.577949523925781 40.498252868652344 143.1614532470703 71.30722045898438 -7.056619644165039 118.66220092773438 151.29615783691406 -84.39058685302734 68.25009155273438 118.87918853759766 -131.68724060058594 -21.70614242553711 105.67589569091797 -154.6158447265625 -140.00563049316406 99.93450164794922 -204.81336975097656 -219.44203186035156 50.04291534423828 -89.07858276367188 -201.6374969482422 14.210212707519531 -64.63093566894531 -219.59580993652344 -9.83211612701416 -39.34187698364258 -199.15969848632812 -20.417978286743164 -21.445301055908203 -175.63226318359375 -16.80634117126465 -19.809795379638672</float_array>
+				<technique_common>
+					<accessor source="#id-spline-2-positions-array" count="17.0" stride="3">
+						<param name="X" type="float"/>
+						<param name="Y" type="float"/>
+						<param name="Z" type="float"/>
+					</accessor>
+				</technique_common>
+			</source>
+			<source id="id-spline-2-intangents">
+				<float_array id="id-spline-2-intangents-array" count="51"> -41.34640121459961 2.998317995661637e-06 -4.417840480804443 -14.520708084106445 2.1815122863699798e-07 -5.021919250488281 96.4212875366211 2.5002962047437904e-06 29.76729965209961 90.48555755615234 -34.246978759765625 71.04902648925781 106.91511535644531 -97.16571807861328 14.655769348144531 180.09898376464844 -134.94113159179688 -37.24748992919922 224.1011962890625 11.577949523925781 40.498252868652344 143.1614532470703 71.30722045898438 -7.056619644165039 118.66220092773438 151.29615783691406 -84.39058685302734 68.25009155273438 118.87918853759766 -131.68724060058594 -21.70614242553711 105.67589569091797 -154.6158447265625 -140.00563049316406 99.93450164794922 -204.81336975097656 -219.44203186035156 50.04291534423828 -89.07858276367188 -201.6374969482422 14.210212707519531 -64.63093566894531 -219.59580993652344 -9.83211612701416 -39.34187698364258 -199.15969848632812 -20.417978286743164 -21.445301055908203 -175.63226318359375 -16.80634117126465 -19.809795379638672</float_array>
+				<technique_common>
+					<accessor source="#id-spline-2-intangents-array" count="17.0" stride="3">
+						<param name="X" type="float"/>
+						<param name="Y" type="float"/>
+						<param name="Z" type="float"/>
+					</accessor>
+				</technique_common>
+			</source>
+			<source id="id-spline-2-outtangents">
+				<float_array id="id-spline-2-outtangents-array" count="51"> -41.34640121459961 2.998317995661637e-06 -4.417840480804443 -14.520708084106445 2.1815122863699798e-07 -5.021919250488281 96.4212875366211 2.5002962047437904e-06 29.76729965209961 90.48555755615234 -34.246978759765625 71.04902648925781 106.91511535644531 -97.16571807861328 14.655769348144531 180.09898376464844 -134.94113159179688 -37.24748992919922 224.1011962890625 11.577949523925781 40.498252868652344 143.1614532470703 71.30722045898438 -7.056619644165039 118.66220092773438 151.29615783691406 -84.39058685302734 68.25009155273438 118.87918853759766 -131.68724060058594 -21.70614242553711 105.67589569091797 -154.6158447265625 -140.00563049316406 99.93450164794922 -204.81336975097656 -219.44203186035156 50.04291534423828 -89.07858276367188 -201.6374969482422 14.210212707519531 -64.63093566894531 -219.59580993652344 -9.83211612701416 -39.34187698364258 -199.15969848632812 -20.417978286743164 -21.445301055908203 -175.63226318359375 -16.80634117126465 -19.809795379638672</float_array>
+				<technique_common>
+					<accessor source="#id-spline-2-outtangents-array" count="17.0" stride="3">
+						<param name="X" type="float"/>
+						<param name="Y" type="float"/>
+						<param name="Z" type="float"/>
+					</accessor>
+				</technique_common>
+			</source>
+			<source id="id-spline-2-interpolations">
+				<Name_array id="id-spline-2-interpolations-array" count="17"> LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+				<technique_common>
+					<accessor source="#id-spline-2-interpolations-array" count="17" stride="1">
+						<param name="INTERPOLATION" type="name"/>
+					</accessor>
+				</technique_common>
+			</source>
+			<source id="id-spline-2-tilts">
+				<float_array id="id-spline-2-tilts-array" count="17"> 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</float_array>
+				<technique_common>
+					<accessor source="#id-spline-2-tilts-array" count="17" stride="1">
+						<param name="TILT" type="float"/>
+					</accessor>
+				</technique_common>
+			</source>
+			<control_vertices>
+				<input semantic="POSITION" source="#id-spline-2-positions"/>
+				<input semantic="IN_TANGENT" source="#id-spline-2-intangents"/>
+				<input semantic="OUT_TANGENT" source="#id-spline-2-outtangents"/>
+				<input semantic="INTERPOLATION" source="#id-spline-2-interpolations"/>
+				<input semantic="TILT" source="#id-spline-2-tilts"/>
+			</control_vertices>
+		</spline>
+	</geometry>
+</library_geometries>
+<library_visual_scenes>
+	<visual_scene id="id-scene-1" name="scene">
+		<node id="Road5Path.001" name="Road5Path.001" type="NODE">
+			<matrix sid="transform"> 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0  </matrix>
+			<instance_geometry url="#id-spline-2">
+			</instance_geometry>
+		</node>
+	</visual_scene>
+</library_visual_scenes>
+<scene>
+	<instance_visual_scene url="#id-scene-1" />
+</scene>
+</COLLADA>

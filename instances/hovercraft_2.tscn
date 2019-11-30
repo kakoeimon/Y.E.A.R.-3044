@@ -1,0 +1,255 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://instances/hovercraft_2.gd" type="Script" id=1]
+[ext_resource path="res://models/hovercraft.glb" type="PackedScene" id=2]
+[ext_resource path="res://audio/engine.wav" type="AudioStream" id=3]
+
+[sub_resource type="PhysicsMaterial" id=1]
+bounce = 0.2
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 0.340782, 1.80105 )
+
+[sub_resource type="SphereShape" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0.412766, 0.880851, 1 )
+colors = PoolColorArray( 0.128906, 0.128906, 1, 1, 0, 1, 0.923828, 1, 0.911765, 1, 0.993279, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.971443, 0.2008 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=9]
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+scale = 19.1
+scale_curve = SubResource( 8 )
+color_ramp = SubResource( 6 )
+hue_variation = 0.04
+hue_variation_random = 0.45
+
+[sub_resource type="QuadMesh" id=10]
+size = Vector2( 0.2, 0.2 )
+
+[sub_resource type="SpatialMaterial" id=11]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CubeMesh" id=12]
+size = Vector3( 0.2, 0.2, 0.2 )
+
+[sub_resource type="SpatialMaterial" id=13]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=14]
+offsets = PoolRealArray( 0, 0.612766, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0, 1, 0.90625, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=15]
+gradient = SubResource( 14 )
+
+[sub_resource type="Curve" id=16]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.998716, 0.2899 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=17]
+curve = SubResource( 16 )
+
+[sub_resource type="ParticlesMaterial" id=18]
+emission_shape = 1
+emission_sphere_radius = 0.1
+gravity = Vector3( 0, 0, 150 )
+angular_velocity = 94.6
+angular_velocity_random = 0.15
+scale_curve = SubResource( 17 )
+color_ramp = SubResource( 15 )
+
+[sub_resource type="QuadMesh" id=19]
+size = Vector2( 0.2, 0.2 )
+
+[sub_resource type="SpatialMaterial" id=20]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CubeMesh" id=21]
+size = Vector3( 0.2, 0.2, 0.2 )
+
+[sub_resource type="SpatialMaterial" id=22]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=23]
+offsets = PoolRealArray( 0, 0.612766, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0, 1, 0.90625, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=24]
+gradient = SubResource( 23 )
+
+[sub_resource type="Curve" id=25]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.998716, 0.2899 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=26]
+curve = SubResource( 25 )
+
+[sub_resource type="ParticlesMaterial" id=27]
+emission_shape = 1
+emission_sphere_radius = 0.1
+gravity = Vector3( 0, 0, 150 )
+angular_velocity = 1.0
+scale_curve = SubResource( 26 )
+color_ramp = SubResource( 24 )
+
+[sub_resource type="QuadMesh" id=28]
+size = Vector2( 0.2, 0.2 )
+
+[node name="HoverCraft" type="RigidBody"]
+input_ray_pickable = false
+mode = 2
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+continuous_cd = true
+can_sleep = false
+linear_damp = 3.0
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.500788, 0.307917 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.491766, -1.47487 )
+shape = SubResource( 3 )
+
+[node name="GravityRay" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.4 )
+enabled = true
+cast_to = Vector3( 0, -8, 0 )
+collision_mask = 2
+
+[node name="HoverRay1" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.4 )
+enabled = true
+cast_to = Vector3( 0, -4.5, 0 )
+collision_mask = 2
+
+[node name="CamLook" type="Spatial" parent="."]
+
+[node name="CamTarget" type="Spatial" parent="CamLook"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85621, 4.71311 )
+
+[node name="mesh" parent="." instance=ExtResource( 2 )]
+
+[node name="HoverParticles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9932 )
+material_override = SubResource( 4 )
+amount = 16
+lifetime = 0.8
+process_material = SubResource( 9 )
+draw_pass_1 = SubResource( 10 )
+
+[node name="CPUHoverParticles" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9932 )
+material_override = SubResource( 11 )
+cast_shadow = 0
+amount = 16
+lifetime = 0.8
+mesh = SubResource( 12 )
+initial_velocity = 0.0
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+scale_amount = 19.1
+scale_amount_curve = SubResource( 7 )
+color_ramp = SubResource( 5 )
+hue_variation = 0.04
+hue_variation_random = 0.45
+
+[node name="FakePositionTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 3.0
+
+[node name="AudioEngine" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0.622589, 1.88079 )
+stream = ExtResource( 3 )
+autoplay = true
+bus = "Engines"
+emission_angle_enabled = true
+emission_angle_degrees = 59.0
+doppler_tracking = 2
+
+[node name="TurbineParticles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51, 0.51, 2.055 )
+material_override = SubResource( 13 )
+amount = 32
+lifetime = 0.1
+process_material = SubResource( 18 )
+draw_pass_1 = SubResource( 19 )
+
+[node name="CPUTurbineParticles" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51, 0.51, 2.055 )
+material_override = SubResource( 20 )
+cast_shadow = 0
+amount = 16
+lifetime = 0.1
+mesh = SubResource( 21 )
+emission_shape = 1
+emission_sphere_radius = 0.1
+gravity = Vector3( 0, 0, 150 )
+initial_velocity = 0.0
+angular_velocity = 94.6
+angular_velocity_random = 0.15
+scale_amount_curve = SubResource( 16 )
+color_ramp = SubResource( 14 )
+
+[node name="TurbineParticles2" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51, 0.51, 2.055 )
+material_override = SubResource( 22 )
+amount = 32
+lifetime = 0.1
+process_material = SubResource( 27 )
+draw_pass_1 = SubResource( 28 )
+
+[node name="CPUTurbineParticles2" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.499052, 0.51, 2.055 )
+material_override = SubResource( 20 )
+cast_shadow = 0
+amount = 16
+lifetime = 0.1
+mesh = SubResource( 21 )
+emission_shape = 1
+emission_sphere_radius = 0.1
+gravity = Vector3( 0, 0, 150 )
+initial_velocity = 0.0
+angular_velocity = 94.6
+angular_velocity_random = 0.15
+scale_amount_curve = SubResource( 16 )
+color_ramp = SubResource( 14 )
+
+[node name="BoostPenaltyTimer" type="Timer" parent="."]
+process_mode = 0
+[connection signal="timeout" from="FakePositionTimer" to="." method="_on_FakePositionTimer_timeout"]
+[connection signal="timeout" from="BoostPenaltyTimer" to="." method="_on_BoostPenaltyTimer_timeout"]

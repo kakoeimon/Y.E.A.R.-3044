@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/helm_4_sound.wav-f9ec4cf7a2ccc44faee043f8c04c3518.sample"
+
+[deps]
+
+source_file="res://audio/helm_4_sound.wav"
+dest_files=[ "res://.import/helm_4_sound.wav-f9ec4cf7a2ccc44faee043f8c04c3518.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
